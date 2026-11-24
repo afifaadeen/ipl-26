@@ -14,3 +14,12 @@ IPL – Fantasy Cricket League
  AWS EC2,
  Docker Hub,
  GitHub Actions.
+
+3. RBAC -
+   Admin: Manages organizers and platform data.
+   Organizer: Manages players, tournaments, contests and match statistics.
+   User: Creates fantasy teams, joins contests and views rankings.
+
+   
+
+
