@@ -53,7 +53,7 @@ class Match(Base):
 
 # FANTASY TEAM TABLE
 class FantasyTeam(Base):
-    __tablename__ = "fantasy_teams"
+    __tablename__ = "fantasy_teams" 
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
