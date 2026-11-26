@@ -1,12 +1,14 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import declarative_base
+import os
 
-DATABASE_URL = "sqlite:///./ipl.db"
+os.makedirs("data", exist_ok=True)
 
-engine = create_engine(DATABASE_URL,connect_args={"check_same_thread": False})
+DATABASE_URL = "sqlite:///./data/ipl.db"
+
+engine = create_engine(DATABASE_URL)
 
 Base = declarative_base()
-
 
 # USER TABLE
 class User(Base):
@@ -117,4 +119,4 @@ class FantasyPointsHistory(Base):
     points = Column(Integer, default=0)
 
 
-Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(engine)
